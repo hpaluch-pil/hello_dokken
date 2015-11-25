@@ -1,0 +1,24 @@
+---
+driver:
+  name: dokken
+  chef_version: 12.5.1
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+
+verifier:
+  root_path: '/opt/verifier'
+  sudo: false
+
+platforms:
+- name: centos-7
+  driver:
+    image: centos:7
+
+suites:
+  - name: default
+    run_list:
+    - recipe[hello_dokken::default]
