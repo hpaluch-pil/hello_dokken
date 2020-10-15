@@ -57,15 +57,29 @@ Clone this project to some directory:
 mkdir ~/projects
 cd ~/projects
 git clone https://github.com/hpaluch-pil/hello_dokken.git
+cd hello_dokken
 ```
 
-Run `kitchen list` - may NOT report errors.
+Run ` kitchen.ruby2.5 list` - verify that no error is reported.
 
 ## Running Tests
 
-Finally run `kitchen test` - this should again run without errors. It will
+Finally run `kitchen.ruby2.5 test` - this should again run without errors. It will
 - run our recipe from `recipes/default.rb`
 - it will test our recipe using `test/integration/default/serverspec/default_spec.rb`
+
+NOTE: On first run you might be asked to accept licenses:
+
+```
+Licenses that need accepting:
+  * Chef Infra Client
+  * Chef InSpec
+
+Do you accept the 2 product licenses (yes/no)?
+```
+
+I answered `yes` (hopefully it will not have dire consequences)
+
 
 Done :-)
 
