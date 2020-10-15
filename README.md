@@ -37,11 +37,13 @@ sudo systemctl enable docker
 sudo systemctl start docker
 ```
 
-Add yourself (unprivileged) user to `docker` group using:
+Add yourself (unprivileged) user to `docker` group (necessary to access Docker socket) using:
 
 ```bash
 sudo /usr/sbin/usermod -G docker -a $USER
 ```
+
+Login again to ensure that your user is now member of `docker` group.
 
 Install kitchen GEMs:
 
